@@ -58,7 +58,7 @@ class TikTokBridge extends EventEmitter {
   async _doConnect() {
     clearTimeout(this.retryTimer);
     const Conn = lib.TikTokLiveConnection || lib.WebcastPushConnection;
-    const opts = { processInitialData: false, enableExtendedGiftInfo: true, fetchRoomInfoOnConnect: true };
+    const opts = { processInitialData: false, enableExtendedGiftInfo: false, fetchRoomInfoOnConnect: false }; // tắt 2 lệnh HTTP phụ: chúng dùng route ký trả phí (Business plan)
     if (this.signApiKey) opts.signApiKey = this.signApiKey;
     if (this.signApiKey && lib.SignConfig) {
       try { lib.SignConfig.apiKey = this.signApiKey; } catch (_) {}
