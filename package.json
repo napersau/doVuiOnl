@@ -1,0 +1,18 @@
+{
+  "name": "ai-thong-minh-hon-hoc-sinh-lop-5",
+  "version": "1.0.0",
+  "description": "Game 3D TikTok Live: Ai thông minh hơn học sinh lớp 5",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node server.js --demo"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "tiktok-live-connector": "^2.5.0"
+  }
+}

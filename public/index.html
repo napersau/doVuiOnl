@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ai Thông Minh Hơn Học Sinh Lớp 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/viewer.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+    <div id="labels"></div>
+    <div id="fx"></div>
+
+    <div id="hud">
+      <header id="topbar">
+        <div class="logo">
+          <span class="logo-brain">🧠</span>
+          <span class="logo-text" id="logoText">AI THÔNG MINH HƠN HỌC SINH LỚP 5</span>
+        </div>
+        <div class="chips">
+          <span class="chip" id="sessionChip">Phiên #0</span>
+          <span class="chip timer" id="timerChip">⏱ --:--</span>
+        </div>
+      </header>
+
+      <section id="boards">
+        <div class="board gold" id="donorBoard">
+          <div class="board-title"><span>👑</span> BẢNG VÀNG DONATE</div>
+          <ol class="board-list"></ol>
+        </div>
+        <div class="board blue" id="scoreBoard">
+          <div class="board-title"><span>🏆</span> TOP ĐIỂM CAO</div>
+          <ol class="board-list"></ol>
+        </div>
+      </section>
+
+      <section id="qpanel">
+        <div class="q-border"></div>
+        <div class="q-inner">
+          <div class="q-head">
+            <span class="q-cat" id="qCat">🎮 Chuẩn bị</span>
+            <span class="q-no" id="qNo">Câu 0</span>
+            <div class="q-timer" id="qTimer">
+              <svg viewBox="0 0 52 52"><circle class="bg" cx="26" cy="26" r="22" /><circle class="fg" id="qTimerRing" cx="26" cy="26" r="22" /></svg>
+              <span id="qTimerNum">15</span>
+            </div>
+          </div>
+          <div class="q-text" id="qText">Đang chờ câu hỏi…</div>
+          <div class="q-answers" id="qAnswers">
+            <div class="ans" data-i="0"><i class="bar"></i><span class="letter">A</span><span class="txt"></span><span class="pct"></span></div>
+            <div class="ans" data-i="1"><i class="bar"></i><span class="letter">B</span><span class="txt"></span><span class="pct"></span></div>
+            <div class="ans" data-i="2"><i class="bar"></i><span class="letter">C</span><span class="txt"></span><span class="pct"></span></div>
+            <div class="ans" data-i="3"><i class="bar"></i><span class="letter">D</span><span class="txt"></span><span class="pct"></span></div>
+          </div>
+          <div class="q-foot" id="qFoot">💬 Comment <b>A</b> <b>B</b> <b>C</b> <b>D</b> để trả lời</div>
+        </div>
+        <div class="q-overlay" id="qOverlay"></div>
+      </section>
+
+      <section id="giftStrip"></section>
+      <div id="toasts"></div>
+
+      <footer id="ticker"><div class="marquee" id="marquee"></div></footer>
+    </div>
+
+    <div id="audioGate">🔊 Nhấn vào màn hình để bật âm thanh</div>
+  </div>
+  <div id="ytHolder"><div id="yt"></div></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
