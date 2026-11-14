@@ -18,7 +18,7 @@ const DEFAULTS = {
   tts: { enabled: true, question: true, answers: false, reveal: true, gift: true, join: false, engine: 'auto', rate: 1.05, volume: 1 },
   categories: {},
   tiktokId: '',
-  signApiKey: '',
+  signApiKey: process.env.EULER_API_KEY || '',
   title: 'AI THÔNG MINH HƠN HỌC SINH LỚP 5',
 };
 

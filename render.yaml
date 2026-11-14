@@ -9,5 +9,7 @@ services:
     envVars:
       - key: NODE_VERSION
         value: "22"
+      - key: EULER_API_KEY
+        sync: false # API key Euler Stream, nhập trên Render dashboard
       - key: ADMIN_PASSWORD
         sync: false # nhập mật khẩu admin trên Render dashboard
